@@ -1,0 +1,201 @@
+:root{
+    --text-shadow: 1px 1px 5px #882929;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+ul{
+    list-style: none;
+}
+
+#root{
+    background-image: url("../assets/v1016-b-09.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    width: 90%;
+    background-image: url('../assets/mountains.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    border-radius: 5px;
+    box-shadow: 10px 10px 40px #000;
+    position: relative;
+    overflow-y: auto;
+}
+main{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+.main .header{
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    padding: 15px;
+    text-shadow: 1px 1px 5px #ccc;
+    transition: .5s;
+}
+.main .header:hover{
+    text-shadow: 10px 10px 10px #000;
+
+}
+
+/* start map */
+.mapContainer{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+.leftSide{
+    width: 100%;
+}
+.mapContainer h3{
+    padding: 10px;
+    color: #fff;
+    text-shadow: var(--text-shadow);
+    transition: .5s;
+}
+.mapContainer h3:hover{
+    text-shadow: 10px 10px 10px #000;
+}
+#myMap{
+    border: 5px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px #000;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+/* start weather */
+.weatherContainer{
+    width: 40%;
+    padding: 10px;
+}
+#weather{
+    color: #fff;
+}
+.getting{
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: flex-end;
+}
+#weatherNP{
+    width: 100px;
+    height: 30px;
+    outline: #882929;
+    box-shadow: 10px 10px 10px #000;
+    transition: 1s;
+}
+#weatherNP:focus{
+    width: 100%;
+    border: 2px solid #882929;
+}
+#getWeather{
+    padding: 5px 15px;
+    background-color: rgba(255, 255, 0, 0.09);
+    box-shadow: 10px 10px 10px #000;
+    color: #fff;
+    text-shadow: var(--text-shadow);
+    cursor: pointer;
+    border-radius: 2px;
+    transition: .5s;
+}
+#getWeather:hover{
+    background-color: #fff;
+    color: #000;
+}
+.gridList{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,60px);
+    grid-gap: 15px;
+
+}
+
+.wtr{
+    background-color: rgba(165, 116, 42, 0.278);
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px #000;
+    padding: 5px;
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+.wtr:hover{
+    box-shadow: 10px 0px 10px #321212;
+}
+
+.windMachine{
+    width: 100px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+/* end weather */
+
+.copright{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    text-shadow: var(--text-shadow);
+    color: #fff;
+}
+/* end map */
+@media (max-width: 1010px) {
+    .gridList{
+        grid-template-columns: repeat(1,100%);
+        grid-template-rows: repeat(4 , 60px);
+
+    }
+
+}
+@media (max-width: 767px) {
+    .mapContainer{
+        width: 100%;
+        justify-content: center;
+    }
+    .mapContainer h3{
+        text-align: center;
+    }
+    .weatherContainer{
+        width: 100%;
+    }
+    #root{
+        align-items: flex-start;
+        overflow-y: auto;
+        padding: 40px 0;
+    }
+    .windMachine{
+        width: 50px;
+    }
+}
+
+
+
+
+#ipButton{
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="assets/YzDM.gif">
+</head>
+<body>
+    <div id="root">
+        <section class="main">
+            <header class="header">
+                TOFI
+            </header>
+            <main>
+                <div class="mapContainer">
+                    <div class="leftSide">
+                    <h3>WHERE ARE YOU ?</h3>
+                    <div id="myMap" style="position:relative;height:400px;"></div>
+                    </div>
+                </div>
+                <!-- <div id="ipButton">+</div> -->
+                <div class="weatherContainer">
+                    <div class="getting">
+                        <input id="weatherNP" type="text" placeholder="Witch City">
+                        <button id="getWeather">Get_Weather</button>
+                    </div>
+                        <div id="weather">
+                        <ul class="gridList">
+                            <li class="wtr" id="sys"><div id="country"> </div><div id="city"> City</div></li>
+                            <li class="wtr" id="sky"><div id="description">Sky</div><img id="skyIcon" src="" alt=""></li>
+                            <li class="wtr" id="main"><div id="temp">Temperature</div></li>
+                            <li class="wtr" id="wind"><div id="speed">Wind Speed</div></li>
+                        </ul>
+                    </div>
+                    <img class="windMachine" src="assets/YzDM.gif" alt="">
+                </div>
+            </main>
+        </section>
+    </div>
+    <footer>
+        <h4 class="copright">@Abdulrahman-Mohammed</h4>
+    </footer>
+    <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=loadMapScenario' async defer></script>
+    <script src="main/main.js"></script>
+</body>
+</html>
